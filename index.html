@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potion of Love</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- หน้าเลือกส่วนผสม -->
+    <div id="selection-page">
+      <div id="potionOfLove">POTION OF LOVE</div>
+      <div id="buttons">
+        <div class="column">
+          <div class="button-wrapper">
+            <button class="ingredient-button" data-type="understanding">Understanding</button>
+            <span class="percentage">0%</span>
+          </div>
+          <div class="button-wrapper">
+            <button class="ingredient-button" data-type="care">Care</button>
+            <span class="percentage">0%</span>
+          </div>
+          <div class="button-wrapper">
+            <button class="ingredient-button" data-type="honesty">Honesty</button>
+            <span class="percentage">0%</span>
+          </div>
+        </div>
+        <div id="bottle-section">
+          <div id="test-tube"></div>
+          <div id="bottle">
+            <div id="water"></div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="button-wrapper">
+            <button class="ingredient-button" data-type="kindness">Kindness</button>
+            <span class="percentage">0%</span>
+          </div>
+          <div class="button-wrapper">
+            <button class="ingredient-button" data-type="patience">Patience</button>
+            <span class="percentage">0%</span>
+          </div>
+          <div class="button-wrapper">
+            <button class="ingredient-button" data-type="loyalty">Loyalty</button>
+            <span class="percentage">0%</span>
+          </div>
+        </div>
+      </div>
+      <div id="controls">
+        <button id="analyzeButton" disabled>Analyze</button>
+        <button id="resetButton">Reset</button>
+      </div>
+    </div>
+
+    <!-- หน้าวิเคราะห์ -->
+    <div id="analysis-page" style="display: none;">
+      <div id="illustration">
+      </div>
+      <p id="result"></p>
+      <button id="playAgainButton">Play Again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

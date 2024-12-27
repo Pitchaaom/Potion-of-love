@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #5b6f82;
+}
+
+/* Container */
+#container {
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Selection Page */
+#selection-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#potionOfLove {
+  position: absolute;
+  top: 100px; /* ปรับระยะห่างจากด้านบน */
+  left: 50%;
+  transform: translateX(-50%); /* จัดให้ข้อความอยู่กลาง */
+  font-size: 30px; /* ขนาดตัวอักษรใหญ่ */
+  font-weight: bold; /* ตัวหนา */
+  text-align: center;
+  color: aliceblue;
+}
+/* Buttons Section */
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ingredient-button {
+  width: 150px; /* ความกว้างที่ต้องการ */
+  height: 50px; /* ความสูงที่ต้องการ */
+  padding: 10px; /* ช่องว่างภายใน */
+  text-align: center; /* จัดข้อความให้อยู่กลาง */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: rgb(54, 54, 54);
+}
+
+.ingredient-button[data-type="understanding"] { background-color: lightblue; }
+.ingredient-button[data-type="care"] { background-color: lightcoral; }
+.ingredient-button[data-type="honesty"] { background-color: lightgreen; }
+.ingredient-button[data-type="kindness"] { background-color: lightyellow; }
+.ingredient-button[data-type="patience"] { background-color: lightpink; }
+.ingredient-button[data-type="loyalty"] { background-color: lightgray; }
+
+.ingredient-button:hover {
+  transform: scale(1.1);
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.percentage {
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  min-width: 40px; /* ปรับให้พื้นที่แสดงเปอร์เซ็นต์มีขนาดเท่ากัน */
+  text-align: center;
+}
+.column .button-wrapper:first-child .percentage {
+  order: 2; /* วางเปอร์เซ็นต์ทางขวาของปุ่ม */
+}
+
+.column .button-wrapper:last-child .percentage {
+  order: 1; /* วางเปอร์เซ็นต์ทางซ้ายของปุ่ม */
+}
+
+
+#test-tube {
+  width: 0px;
+  height: 0px;
+  background-color: lightblue;
+  position: absolute;
+  top: 100%; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  left: 50%; /* จัดให้อยู่ตรงกลางแนวนอน */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+
+
+#bottle-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bottle {
+  width: 100px;
+  height: 400px;
+  background-color: #ffffff;
+  border: 2px solid #bbb;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+  align-items: flex-end; /* น้ำควรเริ่มจากด้านล่าง */
+}
+
+#water {
+  width: 100%; /* ทำให้น้ำกว้างพอดีกับ bottle */
+  height: 0;
+  background-color: lightblue;
+  transition: height 0.3s, background-color 0.3s;
+  border-radius: 0 0 10px 10px; /* มุมล่างโค้งให้เหมือนขวด */
+}
+
+
+/* Controls */
+#controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px; /* เพิ่มระยะห่างจากส่วนด้านบน */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#resetButton:hover:not(:disabled){
+  background-color: #0056b3;
+}
+#analyzeButton:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Analysis Page */
+#analysis-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+#result {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fcfafa;
+}
+
+#illustration {
+  width: 300px; /* กำหนดขนาด container */
+  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+  text-align: center; /* จัดภาพให้อยู่กลาง container */
+}
+
+#illustration img {
+  width: 200px; /* ปรับให้ภาพไม่เกินความกว้างของ container */
+  height: auto; /* รักษาสัดส่วนของภาพ */
+  border: 3px solid #fff; /* ใส่กรอบสีขาว */
+  border-radius: 10px; /* ทำมุมโค้ง */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้น่ารัก */
+}
+
+#playAgainButton {
+  background-color: #28a745;
+}
+
+#playAgainButton:hover {
+  background-color: #218838;
+}
